@@ -16,7 +16,9 @@ gulp.task('less', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('default', function () {
+gulp.task('watch', function () {
     gulp.watch('app/**/*.ts',   [ 'typescript' ]);
     gulp.watch('app/**/*.less', [ 'less' ]);
 });
+
+gulp.task('default', [ 'typescript', 'less', 'watch' ]);
