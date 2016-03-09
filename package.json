@@ -15,13 +15,13 @@
     "typings":"0.6.7",
     "tslint": "^3.2.1",
     "typescript": "1.7.3",
-    "ng2-bootstrap": "latest",
+    "ng2-bootstrap": "1.0.5",
     "ng2-translate": "1.8.0",
-    "less": "latest",
+    "less": "2.6.1",
     "moment": "^2.11.2",
-    "gulp": "latest",
-    "gulp-typescript": "latest",
-    "gulp-less": "latest"
+    "gulp": "3.9.1",
+    "gulp-typescript": "2.12.1",
+    "gulp-less": "3.0.5"
   },
   "scripts": {
     "start": "concurrently \"gulp\" \"npm run lite\" ",
