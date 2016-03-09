@@ -1,0 +1,17 @@
+<div class="cashout">
+    <form>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 style="text-align: left;">{{ 'CASHOUT' | translate }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9">
+                <input class="form-control" type="number" [step]="0.01" [min]="0" [(ngModel)]="value" pattern="[0-9]+([,\.][0-9]{1,2})?" required ngControl="valueControl" #valueControl="ngForm">
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-default btn-md" (click)="cashout()" [disabled]="!valueControl.valid">{{ 'CASHOUT_NOW' | translate }}</button>
+            </div>
+        </div>
+    </form>
+</div>

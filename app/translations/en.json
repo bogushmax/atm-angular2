@@ -1,0 +1,15 @@
+{
+    "ENTER_PIN": "Enter PIN Code",
+    "RESET": "Reset",
+    "TOO_MANY_TRIES": "Too many tries, locked for a 5 seconds",
+    "INVALID_PIN": "Invalid PIN Code",
+    "TOO_SHORT_PIN": "Too short PIN Code",
+    "SELECT_OPERATION": "Select operation",
+    "BALANCE": "Your balance",
+    "CASHOUT": "Сash withdrawal",
+    "CASHOUT_NOW": "Cashout",
+    "LOCALE_CURRENCY": "$",
+    "OK": "OK",
+    "EXIT": "Exit",
+    "BYE": "Bye"
+}

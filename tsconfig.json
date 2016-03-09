@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false
+  },
+  "exclude": [
+    "node_modules",
+    "typings/main",
+    "typings/main.d.ts"
+  ],
+  "files": [
+    "app/main.ts",
+    "typings/browser/definitions/moment/moment.d.ts",
+    "typings/browser/ambient/es6-shim/es6-shim.d.ts"
+  ]
+}

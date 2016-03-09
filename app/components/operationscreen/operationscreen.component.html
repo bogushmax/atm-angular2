@@ -1,0 +1,22 @@
+<div class="operationscreen">
+    <div class="row">
+        <div class="col-xs-12">
+            <carousel>
+                <slide>
+                    <h3>{{ 'SELECT_OPERATION' | translate }}</h3>
+                </slide>
+                <slide>
+                    <balance #balance></balance>
+                </slide>
+                <slide>
+                    <cashout (onCashout)="balance.updateBalance()"></cashout>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-danger btn-md pull-right" (click)="exit()">{{ 'EXIT' | translate }}</button>
+        </div>
+    </div>
+</div>

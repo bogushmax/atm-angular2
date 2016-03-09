@@ -1,0 +1,65 @@
+<div class="pinpad text-center">
+    <form>
+        <div class="row">
+            <div class="col-xs-12">
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    placeholder="{{ 'ENTER_PIN' | translate }}" 
+                    maxlength="4" minlength="4" [(ngModel)]="pincode" ngControl="pincodeControl" #pincodeControl="ngForm" [disabled]="isLocked" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(1)" [disabled]="isLocked">1</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(2)" [disabled]="isLocked">2</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(3)" [disabled]="isLocked">3</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(4)" [disabled]="isLocked">4</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(5)" [disabled]="isLocked">5</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(6)" [disabled]="isLocked">6</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(7)" [disabled]="isLocked">7</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(8)" [disabled]="isLocked">8</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(9)" [disabled]="isLocked">9</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4">
+                <button class="btn btn-default btn-lg btn-block key" (click)="addNumber(0)" [disabled]="isLocked">0</button>
+            </div>
+            <div class="col-xs-4">
+                <button class="btn btn-danger btn-lg btn-block key" (click)="reset()" [disabled]="isLocked">{{ 'RESET' | translate }}</button>
+            </div>
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-success btn-lg btn-block key" (click)="tryUnlock()" [disabled]="isLocked || !pincodeControl.valid">{{ 'OK' | translate }}</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12" *ngIf="isInvalid && !isLocked">
+                {{ 'INVALID_PIN' | translate }}
+            </div>
+            <div class="col-xs-12" *ngIf="isLocked">
+                {{ 'TOO_MANY_TRIES' | translate }}
+            </div>
+        </div>
+    </form>
+</div>
