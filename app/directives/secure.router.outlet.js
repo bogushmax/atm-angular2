@@ -34,10 +34,10 @@ System.register(['angular2/core', 'angular2/router', '../services/account.servic
         execute: function() {
             SecureRouterOutlet = (function (_super) {
                 __extends(SecureRouterOutlet, _super);
-                function SecureRouterOutlet(elementRef, loader, router, nameAttribute) {
+                function SecureRouterOutlet(elementRef, loader, router, nameAttribute, accountService) {
                     _super.call(this, elementRef, loader, router, nameAttribute);
                     this.router = router;
-                    this.accountService = elementRef._appElement._injector.get(account_service_1.AccountService);
+                    this.accountService = accountService;
                 }
                 SecureRouterOutlet.prototype.activate = function (instruction) {
                     var url = this.router.lastNavigationAttempt;
@@ -53,7 +53,7 @@ System.register(['angular2/core', 'angular2/router', '../services/account.servic
                         selector: 'secure-router-outlet'
                     }),
                     __param(3, core_1.Attribute('name')), 
-                    __metadata('design:paramtypes', [core_1.ElementRef, core_1.DynamicComponentLoader, router_1.Router, String])
+                    __metadata('design:paramtypes', [core_1.ElementRef, core_1.DynamicComponentLoader, router_1.Router, String, account_service_1.AccountService])
                 ], SecureRouterOutlet);
                 return SecureRouterOutlet;
             }(router_1.RouterOutlet));

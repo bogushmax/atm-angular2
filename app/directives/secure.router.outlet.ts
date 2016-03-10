@@ -12,10 +12,10 @@ export class SecureRouterOutlet extends RouterOutlet {
     private accountService:AccountService;
   
     constructor(elementRef:ElementRef, loader:DynamicComponentLoader, 
-                router:Router, @Attribute('name') nameAttribute:string) {
+                router:Router, @Attribute('name') nameAttribute:string, accountService: AccountService) {
         super(elementRef, loader, router, nameAttribute);
         this.router = router;
-        this.accountService = elementRef._appElement._injector.get(AccountService);
+        this.accountService = accountService;
     }
 
     activate(instruction:ComponentInstruction) {
