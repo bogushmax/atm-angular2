@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', '../directives/loggedin.router.outlet', './pinpad/pinpad.component', './operationscreen/operationscreen.component', './bye/bye.component', 'ng2-translate', '../services/account.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', '../directives/secure.router.outlet', './pinpad/pinpad.component', './operationscreen/operationscreen.component', './bye/bye.component', 'ng2-translate', '../services/account.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', '../directives/loggedin.rou
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, loggedin_router_outlet_1, pinpad_component_1, operationscreen_component_1, bye_component_1, ng2_translate_1, account_service_1;
+    var core_1, router_1, secure_router_outlet_1, pinpad_component_1, operationscreen_component_1, bye_component_1, ng2_translate_1, account_service_1;
     var AtmComponent;
     return {
         setters:[
@@ -20,8 +20,8 @@ System.register(['angular2/core', 'angular2/router', '../directives/loggedin.rou
             function (router_1_1) {
                 router_1 = router_1_1;
             },
-            function (loggedin_router_outlet_1_1) {
-                loggedin_router_outlet_1 = loggedin_router_outlet_1_1;
+            function (secure_router_outlet_1_1) {
+                secure_router_outlet_1 = secure_router_outlet_1_1;
             },
             function (pinpad_component_1_1) {
                 pinpad_component_1 = pinpad_component_1_1;
@@ -55,7 +55,7 @@ System.register(['angular2/core', 'angular2/router', '../directives/loggedin.rou
                         selector: 'atm',
                         templateUrl: 'app/components/atm.component.html',
                         styleUrls: ['app/components/atm.component.css'],
-                        directives: [router_1.ROUTER_DIRECTIVES, loggedin_router_outlet_1.LoggedInOutlet],
+                        directives: [router_1.ROUTER_DIRECTIVES, secure_router_outlet_1.SecureRouterOutlet],
                         providers: [account_service_1.AccountService]
                     }),
                     router_1.RouteConfig([

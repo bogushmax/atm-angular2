@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation, Injectable} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
-import {LoggedInOutlet} from '../directives/loggedin.router.outlet';
+import {SecureRouterOutlet} from '../directives/secure.router.outlet';
 
 import {PinPadComponent} from './pinpad/pinpad.component';
 import {OperationScreenComponent} from './operationscreen/operationscreen.component';
@@ -15,7 +15,7 @@ import {AccountService} from '../services/account.service';
     selector: 'atm',
     templateUrl: 'app/components/atm.component.html',
     styleUrls: [ 'app/components/atm.component.css' ],
-    directives: [ ROUTER_DIRECTIVES, LoggedInOutlet ],
+    directives: [ ROUTER_DIRECTIVES, SecureRouterOutlet ],
     providers: [ AccountService ]
 })
 @RouteConfig([
